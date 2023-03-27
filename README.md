@@ -1,3 +1,7 @@
+# Java exercise
+
+This repository is an study on Java. To practice Lists and ArrayList creation and a little of algorithm, I`ve decided to create an calendar and a code that user can use to search a date and find if it is a holyday.
+
 ## Getting Started
 
 Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
