@@ -1,10 +1,8 @@
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-
         Holyday confraternizaçãoMundial = new Holyday();
         confraternizaçãoMundial.setDate("01/01/2023");
         confraternizaçãoMundial.setHolydayName("Confraternização mundial");
@@ -63,18 +61,9 @@ public class App {
         holydays.add(proclamacaoDaRepulbica);
         holydays.add(natal);
 
-        Scanner read = new Scanner(System.in);
-        System.out.println("Digite a data que deseja procurar o feriado");
-        String date = read.nextLine();
+        HolydaySearch holydaySearch = new HolydaySearch();
 
-        for (int i = 0; i < holydays.size(); i++) {
-            if (date.equals(holydays.get(i).getDate()) == true) {
-                System.out.println("O feriado do dia " + date + " é: " +holydays.get(i).getHolydayName());
-                break;
-            }
-            if (i == holydays.size() - 1) {
-                System.out.println("Não existe feriado com tal data.");
-            }
-        }
+        holydaySearch.searchADate(holydays);
+        holydaySearch.returnHolydayList(holydays);
     }
 }
